@@ -1,0 +1,66 @@
+.dropdown select {
+  padding: 18px 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  font-size: 16px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  width:160px;
+
+}
+
+.dropdown {
+  position: relative;
+  width: 160px;
+}
+
+/* Flèche personnalisée */
+.dropdown::after {
+  content: '▼';
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 50px;
+}
+input{
+    width: 400px;
+    padding: 1px 25px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 3px 0px rgb(200, 198, 198);
+}
+.card{
+    width: 270px;
+    box-shadow: 0px 0px 3px 0px rgb(185, 184, 184);
+
+}
+.flag{
+    width: 270px;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content{
+    padding: 15px 20px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 70px;
+    flex-wrap: wrap;
+}
