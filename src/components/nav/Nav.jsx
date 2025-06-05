@@ -24,10 +24,7 @@ export default function Nav() {
                 <h1 className='divNav1H1'>Where in the world?</h1>
             </div>
             <div className='divNav2' onClick={toggleDarkMode}>
-                <FontAwesomeIcon 
-                    className='divNav2Icon' 
-                    icon={darkMode ? faSun : faMoon} 
-                />
+                <FontAwesomeIcon className='divNav2Icon' icon={darkMode ? faSun : faMoon} />
                 <p className='divNav2P'>{darkMode ? 'Light Mode' : 'Dark Mode'}</p>
             </div>
         </nav>
