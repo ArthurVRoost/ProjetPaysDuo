@@ -17,11 +17,27 @@
     gap: 10px;
     cursor: pointer;
 }
+.divNav1H1,
+.divNav2P,
+.divNav2Icon {
+    color: black;
+}
+
+body.dark-mode .divNav1H1,
+body.dark-mode .divNav2P,
+body.dark-mode .divNav2Icon {
+    color: white;
+}
 @media (max-width: 768px) {
     .divNav2{
         margin-left: 20%;
+        margin-top: 2%;
     }
     .divNav2P{
         display: none;
+        
+    }
+    .navDiv{
+        align-items: center;
     }
 }
