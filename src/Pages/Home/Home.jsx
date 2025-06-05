@@ -35,17 +35,9 @@ export default function Home(props) {
         <>
             <Nav/>
             <div className="header">
-                <input 
-                    type="search" 
-                    placeholder='Search for a country...'
-                    value={recherche}
-                    onChange={(e) => setRecherche(e.target.value)}
-                />
+                <input type="search" placeholder='Search for a country...' value={recherche} onChange={(e) => setRecherche(e.target.value)}/>
                 <div className="dropdown">
-                    <select 
-                        value={regionFilter}
-                        onChange={(e) => setRegionFilter(e.target.value)}
-                    >
+                    <select value={regionFilter} onChange={(e) => setRegionFilter(e.target.value)}>
                         <option value="">Filter by Region</option>
                         <option value="Africa">Africa</option>
                         <option value="Americas">Americas</option>
@@ -64,17 +56,8 @@ export default function Home(props) {
                         return matchesSearch && matchesRegion;
                     })
                     .map((element) => (
-                        <div 
-                            className="card" 
-                            key={element.cca3}
-                            onClick={() => handleCountryClick(element.name.common)}
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <img 
-                                src={element.flags.svg} 
-                                alt={`Flag of ${element.name.common}`}
-                                className="flag"
-                            />
+                        <div  className="card"  key={element.cca3} onClick={() => handleCountryClick(element.name.common)} style={{ cursor: 'pointer' }}>
+                            <img  src={element.flags.svg}  alt={`Flag of ${element.name.common}`} className="flag"/>
                             <div className="card-content">
                                 <h3>{element.name.common}</h3>
                                 <p><strong>Population:</strong> {element.population?.toLocaleString() || 'N/A'}</p>

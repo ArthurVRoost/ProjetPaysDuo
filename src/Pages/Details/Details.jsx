@@ -19,7 +19,6 @@ export default function Details() {
                 const countryData = response.data[0]
                 setCountry(countryData)
                 
-                // Si le pays a des frontières, récupérer les noms des pays frontaliers
                 if (countryData.borders && countryData.borders.length > 0) {
                     const borderCodes = countryData.borders.join(',')
                     return axios.get(`https://restcountries.com/v3.1/alpha?codes=${borderCodes}`)
@@ -43,7 +42,7 @@ export default function Details() {
     }
 
     const handleBackClick = () => {
-        navigate(-1) // Retour à la page précédente
+        navigate(-1) 
     }
 
     if (loading) return <div className="loading">Chargement des détails...</div>
@@ -103,11 +102,7 @@ export default function Details() {
                             <h3>Border Countries:</h3>
                             <div className="border-buttons">
                                 {borderCountries.map((borderCountry) => (
-                                    <button
-                                        key={borderCountry.cca3}
-                                        onClick={() => handleBorderCountryClick(borderCountry.name.common)}
-                                        className="border-country-btn"
-                                    >
+                                    <button key={borderCountry.cca3} onClick={() => handleBorderCountryClick(borderCountry.name.common)} className="border-country-btn">
                                         {borderCountry.name.common}
                                     </button>
                                 ))}
