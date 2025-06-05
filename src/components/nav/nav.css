@@ -17,3 +17,11 @@
     gap: 10px;
     cursor: pointer;
 }
+@media (max-width: 768px) {
+    .divNav2{
+        margin-left: 20%;
+    }
+    .divNav2P{
+        display: none;
+    }
+}
