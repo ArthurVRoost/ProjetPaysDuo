@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './Home.css'
 import axios from 'axios'
 
@@ -8,6 +9,11 @@ export default function Home(props) {
     const [error, setError] = useState(null)
     const[recherche,setRecherche]=useState("")
     const[regionFilter,setRegionFilter]=useState("")
+    const navigate = useNavigate()
+
+    const handleCountryClick = (countryName) => {
+        navigate(`/country/${countryName}`)
+    }
 
     useEffect(() => {
         axios.get("https://restcountries.com/v3.1/all")
@@ -47,25 +53,31 @@ export default function Home(props) {
                     </select>
                 </div>
             </div>
-<div className="card-container">
+
+            <div className="card-container">
                 {data
                     .filter(country => {
                         const matchesSearch = country.name.common.toLowerCase().includes(recherche.toLowerCase());
-                        const matchesRegion = regionFilter === ""  || country.region === regionFilter;
+                        const matchesRegion = regionFilter === "" || country.region === regionFilter;
                         return matchesSearch && matchesRegion;
                     })
-                   .map((element) => (
-                        <div className="card" key={element.cca3}>
+                    .map((element) => (
+                        <div 
+                            className="card" 
+                            key={element.cca3}
+                            onClick={() => handleCountryClick(element.name.common)}
+                            style={{ cursor: 'pointer' }}
+                        >
                             <img 
                                 src={element.flags.svg} 
-                                alt=""
+                                alt={`Flag of ${element.name.common}`}
                                 className="flag"
                             />
                             <div className="card-content">
-                                <h3 className='name'>{element.name.common}</h3>
-                                <p className='population'><strong>Population:</strong> {element.population?.toLocaleString()  }</p>
-                                <p className='region'><strong>Region:</strong> {element.region}</p>
-                                <p className='capital'><strong>Capital:</strong> {element.capital?.[0]  }</p>
+                                <h3>{element.name.common}</h3>
+                                <p><strong>Population:</strong> {element.population?.toLocaleString() || 'N/A'}</p>
+                                <p><strong>Region:</strong> {element.region}</p>
+                                <p><strong>Capital:</strong> {element.capital?.[0] || 'N/A'}</p>
                             </div>
                         </div>
                     ))
