@@ -146,22 +146,3 @@
     }
 }
 
-/* Mode sombre (optionnel) */
-@media (prefers-color-scheme: dark) {
-    .country-detail {
-        background: #202c37;
-        color: #fff;
-    }
-    
-    .country-name,
-    .info-column,
-    .border-countries h3 {
-        color: #fff;
-    }
-    
-    .back-button,
-    .border-country-btn {
-        background: #2b3945;
-        color: #fff;
-    }
-}

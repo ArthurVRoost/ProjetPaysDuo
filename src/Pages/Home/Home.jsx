@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './Home.css'
 import axios from 'axios'
+import Nav from '../../components/nav/Nav'
 
 export default function Home(props) {
     const[data,setData]=useState([])
@@ -32,6 +33,7 @@ export default function Home(props) {
 
     return(
         <>
+            <Nav/>
             <div className="header">
                 <input 
                     type="search" 
