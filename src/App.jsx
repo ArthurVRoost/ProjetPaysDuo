@@ -4,6 +4,7 @@ import Nav from './components/nav/Nav'
 import Home from './Pages/Home/Home'
 import { Route, Routes } from 'react-router-dom'
 import Details from './Pages/Details/Details'
+import Layout from './components/Layout'
 
 function App() {
   
@@ -12,9 +13,11 @@ function App() {
     <>
       
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/country/:countryName" element={<Details />} />
-      </Routes>
+            <Route path="/" element={<Layout />}>
+                <Route index element={<Home />} />
+                <Route path="country/:countryName" element={<Details />} />
+            </Route>
+        </Routes>
     
     </>
   )

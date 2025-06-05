@@ -51,7 +51,7 @@ export default function Details() {
 
     return (
         <>
-        <Nav/>
+        
         <div className="country-detail">
             <button onClick={handleBackClick} className="back-button">
                 ← Back
