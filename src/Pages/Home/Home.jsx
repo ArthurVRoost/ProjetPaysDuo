@@ -17,7 +17,7 @@ export default function Home(props) {
     }
 
     useEffect(() => {
-        axios.get("https://restcountries.com/v3.1/all")
+        axios.get("https://restcountries.com/v3.1/all?fields=name,flags,capital,region,population")
             .then((response) => {
                 setData(response.data)
                 setLoading(false)
