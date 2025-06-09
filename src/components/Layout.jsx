@@ -5,6 +5,7 @@ import Footer from './footer/Footer';
 
 export default function Layout() {
     return (
+        // NAV ET FOOTER EN DEHORS DU MAIN POUR EVITER DES REPETITIONS
         <>
             <Nav />
             <main>
