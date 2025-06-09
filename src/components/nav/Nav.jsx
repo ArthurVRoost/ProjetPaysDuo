@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 
 // FUNCTION
 export default function Nav() {
+    // CONST
     const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
