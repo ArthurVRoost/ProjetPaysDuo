@@ -58,6 +58,7 @@ export default function Home(props) {
                         const matchesRegion = regionFilter === "" || country.region === regionFilter;
                         return matchesSearch && matchesRegion;
                     })
+                    // MAP SANS OBJET VALUES POUR MAPPER UNIQUEMENT CE QU'ON VEUT
                     .map((element) => (
                         <div  className="card"  key={element.cca3} onClick={() => handleCountryClick(element.name.common)} style={{ cursor: 'pointer' }}>
                             <img  src={element.flags.svg}  alt={`Flag of ${element.name.common}`} className="flag"/>
