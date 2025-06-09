@@ -101,7 +101,7 @@ export default function Details() {
                             }</p>
                         </div>
                     </div>
-
+                    {/* AFFICHAGE CONDITIONNEL POUR LES FRONTIERES */}
                     {borderCountries.length > 0 && (
                         <div className="border-countries">
                             <h3>Border Countries:</h3>
