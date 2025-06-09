@@ -5,6 +5,7 @@ import axios from 'axios'
 import './Details.css'
 import Nav from '../../components/nav/Nav'
 
+// FUNCTION
 export default function Details() {
     const [country, setCountry] = useState(null)
     const [loading, setLoading] = useState(true)

@@ -5,6 +5,7 @@ import './Home.css'
 import axios from 'axios'
 import Nav from '../../components/nav/Nav'
 
+// FUNCTION
 export default function Home(props) {
     const[data,setData]=useState([])
     const [loading, setLoading] = useState(true)

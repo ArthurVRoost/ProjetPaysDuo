@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom'
 import Details from './Pages/Details/Details'
 import Layout from './components/Layout'
 
+// FUNCTION
 function App() {
   
 
