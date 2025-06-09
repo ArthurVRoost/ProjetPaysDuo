@@ -9,6 +9,7 @@ export default function Nav() {
     // CONST
     const [darkMode, setDarkMode] = useState(false);
 
+    // DARKMODE 
     useEffect(() => {
         if (darkMode) {
             document.body.classList.add('dark-mode');
@@ -16,7 +17,8 @@ export default function Nav() {
             document.body.classList.remove('dark-mode');
         }
     }, [darkMode]);
-
+    
+    // TOGGLE POUR DARKMODE
     const toggleDarkMode = () => {
         setDarkMode(prev => !prev);
     };
