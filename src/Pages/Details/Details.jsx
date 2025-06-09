@@ -7,6 +7,7 @@ import Nav from '../../components/nav/Nav'
 
 // FUNCTION
 export default function Details() {
+    // CONST
     const [country, setCountry] = useState(null)
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)

@@ -7,6 +7,7 @@ import Nav from '../../components/nav/Nav'
 
 // FUNCTION
 export default function Home(props) {
+    // CONST
     const[data,setData]=useState([])
     const [loading, setLoading] = useState(true)
     const [error, setError] = useState(null)
