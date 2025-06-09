@@ -36,7 +36,7 @@ export default function Home(props) {
 
     return(
         <>
-            
+            {/* FILTER REGIONS */}
             <div className="header">
                 <input type="search" placeholder='&#x1F50D; Search for a country...' value={recherche} onChange={(e) => setRecherche(e.target.value)}/>
                 <div className="dropdown">
