@@ -50,7 +50,7 @@ export default function Home(props) {
                     </select>
                 </div>
             </div>
-
+            {/* FILTER INPUT QUI GERE AUSSI MINUSCULE ETC */}
             <div className="card-container">
                 {data
                     .filter(country => {
