@@ -1,6 +1,7 @@
 // IMPORTS
 import './footer.css'
 
+// FUNCTION
 export default function Footer() {
     return(
         <>

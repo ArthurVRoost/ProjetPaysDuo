@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { useState, useEffect } from 'react';
 
+// FUNCTION
 export default function Nav() {
     const [darkMode, setDarkMode] = useState(false);
 
