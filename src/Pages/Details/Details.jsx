@@ -73,7 +73,7 @@ export default function Details() {
 
                 <div className="info-section">
                     <h1 className="country-name">{country.name.common}</h1>
-                    
+                    {/* Object.values retourne toutes les valeurs de l'objet  */}
                     <div className="info-grid">
                         <div className="info-column">
                             <p><strong>Native Name:</strong> {
@@ -86,7 +86,7 @@ export default function Details() {
                             <p><strong>Sub Region:</strong> {country.subregion || 'N/A'}</p>
                             <p><strong>Capital:</strong> {country.capital?.[0] || 'N/A'}</p>
                         </div>
-
+                        
                         <div className="info-column">
                             <p><strong>Top Level Domain:</strong> {country.tld?.[0] || 'N/A'}</p>
                             <p><strong>Currencies:</strong> {
