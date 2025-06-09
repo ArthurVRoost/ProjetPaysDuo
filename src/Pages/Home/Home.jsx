@@ -30,7 +30,7 @@ export default function Home(props) {
                 setLoading(false)
             })
     }, [])
-
+    // GESTION D'ERREUR
     if (loading) return <div className="text-center p-4">Chargement...</div>
     if (error) return <div className="text-center p-4 text-red-500">Erreur: {error}</div>
 

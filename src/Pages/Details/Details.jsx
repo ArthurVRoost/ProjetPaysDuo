@@ -46,8 +46,8 @@ export default function Details() {
 
     const handleBackClick = () => {
         navigate(-1) 
-    }
-
+    }   
+    // GESTION D'ERREUR
     if (loading) return <div className="loading">Chargement des détails...</div>
     if (error) return <div className="error">Erreur: {error}</div>
     if (!country) return <div className="error">Pays non trouvé</div>
