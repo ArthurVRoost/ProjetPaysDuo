@@ -45,7 +45,7 @@ export default function Details() {
     const handleBorderCountryClick = (borderCountryName) => {
         navigate(`/country/${borderCountryName}`)
     }
-
+    // USENAVIGATE POUR UN RETOUR DYNAMIQUE
     const handleBackClick = () => {
         navigate(-1) 
     }   
