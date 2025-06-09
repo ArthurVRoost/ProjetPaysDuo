@@ -22,6 +22,7 @@ export default function Details() {
                 const countryData = response.data[0]
                 setCountry(countryData)
                 
+                // POUR LES PAYS FRONTALIERS
                 if (countryData.borders && countryData.borders.length > 0) {
                     const borderCodes = countryData.borders.join(',')
                     return axios.get(`https://restcountries.com/v3.1/alpha?codes=${borderCodes}`)
@@ -40,6 +41,7 @@ export default function Details() {
             })
     }, [countryName])
 
+    // OUVRE LA BONNE PAGE DYNAMIQUEMENT POUR LES FRONTIERES
     const handleBorderCountryClick = (borderCountryName) => {
         navigate(`/country/${borderCountryName}`)
     }
