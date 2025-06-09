@@ -14,7 +14,7 @@ export default function Home(props) {
     const[recherche,setRecherche]=useState("")
     const[regionFilter,setRegionFilter]=useState("")
     const navigate = useNavigate()
-    
+    // OUVRE LA BONNE PAGE DYNAMIQUEMENT
     const handleCountryClick = (countryName) => {
         navigate(`/country/${countryName}`)
     }
